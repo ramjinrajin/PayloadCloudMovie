@@ -1,0 +1,24 @@
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\bin\Debug\Device.exe.config
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Interop.WMPLib.dll
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.csproj.ResolveComReference.cache
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\bin\Debug\Device.exe
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\bin\Debug\Device.pdb
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\bin\Debug\Interop.WMPLib.dll
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.csprojResolveAssemblyReference.cache
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.Properties.Resources.resources
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.csproj.GenerateResource.Cache
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.exe
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.pdb
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.Upload.resources
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.Login.resources
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\bin\Debug\bin\Debug\inzCloud.mdf
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\bin\Debug\bin\Debug\inzCloud_log.ldf
+C:\Users\RamjinM\Desktop\Reshma\v6 InzCloud\Device\obj\Debug\Device.VideoPlayer.resources
+C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\bin\Debug\Device.exe.config
+C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\Interop.WMPLib.dll
+C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\Device.csproj.ResolveComReference.cache
+C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\Device.exe
+C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\Device.pdb

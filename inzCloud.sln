@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inzCloud", "inzCloud\inzCloud.csproj", "{0F71FFF5-B4C9-4E2E-B71E-BA5A3933C14C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device", "Device\Device.csproj", "{FA8766EE-37EE-4AB3-B850-29185ABBD2DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F71FFF5-B4C9-4E2E-B71E-BA5A3933C14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F71FFF5-B4C9-4E2E-B71E-BA5A3933C14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F71FFF5-B4C9-4E2E-B71E-BA5A3933C14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F71FFF5-B4C9-4E2E-B71E-BA5A3933C14C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA8766EE-37EE-4AB3-B850-29185ABBD2DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA8766EE-37EE-4AB3-B850-29185ABBD2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA8766EE-37EE-4AB3-B850-29185ABBD2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA8766EE-37EE-4AB3-B850-29185ABBD2DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

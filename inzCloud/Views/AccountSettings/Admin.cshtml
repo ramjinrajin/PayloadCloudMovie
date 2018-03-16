@@ -1,0 +1,201 @@
+﻿@model List<inzCloud.Models.FileEntity>
+
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+<link href="~/assets/css/admin/adminstyle.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="~/assets/js/jquery-3.0.0.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/dot-luv/jquery-ui.css">
+<script>
+
+    //$(document).ready(function () {
+    //    $("#FilePanel").css("display", "none");
+    //    $("#save").css("display", "none");
+    //    $("#next").click(function () {
+    //        $("#UserPanel").css("display", "none");
+    //        $("#FilePanel").css("display", "block");
+    //        $("#save").css("display", "block");
+    //        $("#next").css("display", "none");
+    //    });
+    //});
+</script>
+
+
+<style>
+    .nav-tabs {
+        border-bottom: 2px solid #DDD;
+    }
+
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+            border-width: 0;
+        }
+
+        .nav-tabs > li > a {
+            border: none;
+            color: #666;
+        }
+
+            .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+                border: none;
+                color: #4285F4 !important;
+                background: transparent;
+            }
+
+            .nav-tabs > li > a::after {
+                content: "";
+                background: #4285F4;
+                height: 2px;
+                position: absolute;
+                width: 100%;
+                left: 0px;
+                bottom: -1px;
+                transition: all 250ms ease 0s;
+                transform: scale(0);
+            }
+
+        .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+            transform: scale(1);
+        }
+
+    .tab-nav > li > a::after {
+        background: #21527d none repeat scroll 0% 0%;
+        color: #fff;
+    }
+
+    .tab-pane {
+        padding: 15px 0;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+
+    .card {
+        background: #FFF none repeat scroll 0% 0%;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+        margin-bottom: 30px;
+    }
+</style>
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Do you wish to delete this file ?</h4>
+                </div>
+                <div class="modal-footer">
+
+                    <a id="comment" class="btn btn-primary"  href="#">Delete</a>
+                    <button type="button" class="btn btn-default">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+ 
+
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Nav tabs --><div class="card">
+                <ul class="nav nav-tabs" role="tablist" id="tabs">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">File Access</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">File Delete</a></li>
+                    @*<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>*@
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div id="UserPanel">
+                            <div class="panel panel-default">
+                                <!-- Default panel contents -->
+                                <!-- List group -->
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+
+                                        <div class="panel-heading">User  access over files can be Enable/Disable</div>
+                                    </li>
+
+                                    @foreach (var Item in Model)
+                                    {
+                                        <li class="list-group-item">
+                                            @Item.Name
+                                            <div class="material-switch pull-right">
+                                                <a itemprop="url" class="btn btn-primary btn-xs" href="/AccountSettings/FilePermission?FileId= @Item.FileId">Edit Access</a>
+                                            </div>
+                                        </li>
+                                    }
+
+
+
+                                </ul>
+
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div>
+                            <div class="panel panel-default">
+                                <!-- Default panel contents -->
+                                <!-- List group -->
+                                <ul class="list-group">
+                                    @foreach (var Item in Model)
+                                    {
+                                        <li class="list-group-item">
+                                            @Item.Name
+                                            <div class="material-switch pull-right">
+                                                <button class="btn btn-primary btn-xs delete" data-toggle="modal" value='@Item.FileId' data-target="#myModal">Delete File</button>
+                                                @*<a itemprop="url" class="btn btn-primary btn-xs" href="/AccountSettings/FilePermission?FileId= @Item.FileId">Delete File</a>*@
+                                            </div>
+                                        </li>
+                                    }
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <div role="tabpanel" class="tab-pane" id="settings">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/assets/js/jquery-3.0.0.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $(".delete").click(function () {
+            var me = $(this);
+            $('#comment').attr("href", "/FileDirectory/Delete?FileId=" + me.val());
+        });
+
+
+    });
+
+</script>

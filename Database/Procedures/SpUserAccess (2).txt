@@ -1,0 +1,14 @@
+Create Proc SpFileAccess
+(
+
+@FileId int
+)
+AS
+Begin
+select * from (select U.UserID,U.Username,isnull(F.Status,'D') as Rowstatus,U.isadmin from inz_USERS  U   FULL OUTER JOIN  inzFileAccess  F 
+
+ON F.UserId=U.UserID and  F.fileid=@FileId 
+
+) x where x.Userid is not null and x.isadmin is null
+END
+GO

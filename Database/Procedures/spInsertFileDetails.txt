@@ -1,0 +1,47 @@
+CREATE procedure spInsertFileDetails
+ 
+(
+
+@FileName varchar(100),
+
+@FileType varchar(100),
+
+@description varchar(100),
+
+@Key varchar(100),
+
+@UserId int,
+
+@IsEncrypted int,
+
+@Document varchar(100)
+)
+
+AS BEGIN
+
+ 
+
+INSERT INTO [dbo].[inz_file]
+           ([UserID]
+           ,[description]
+           ,[FileName]
+           ,[FileType]
+           ,[Key]
+           ,[createdate]
+           ,[modifieddate]
+           ,[IsEncrypted]
+	   ,[DocumentName])
+     VALUES
+           (@UserId
+           ,@description
+           ,@FileName
+           ,@FileType
+           ,@Key
+           ,GETDATE()
+           ,GETDATE()
+           ,@IsEncrypted
+           ,@Document)
+ 
+
+END
+GO

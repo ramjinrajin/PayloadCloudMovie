@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIt38mjwF+0+rqn2CVPJBYQAAAAACAAAAAAAQZgAAAAEAACAAAAARacpwgdGPErrSxMIMaBeaEhHKxdJgaPPq8+h+LoseYgAAAAAOgAAAAAIAACAAAAAy4PNOM3PGw+oAOzCscZIG6nfS1HtBTY5+MwqaAFMffiAAAACm9CvqfpXX+Bl/XcR+aZqcGqPuH2SWMwgpyUZHQRLVAkAAAAB/mxzctxs4e2CgJ1NAKVaT70utN0La1eaGWlPiEUzzDSQIUAsojVGxe6NU07twmYZePuymv9tVwLJW2OnvejJ0</EncryptedPassword>
+    <_PublishTargetUrl>ftp://66.85.73.147/www.inzcloud.somee.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="assets/css/admin/adminstyle.css">
+      <publishTime>03/26/2017 00:48:52</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ad.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ae.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/af.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ag.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ai.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/al.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/am.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ao.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/aq.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ar.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/as.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/at.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/au.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/aw.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ax.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/az.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ba.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bb.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bd.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/be.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bf.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bg.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bh.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bi.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bj.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bl.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bm.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bn.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bo.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bq.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/br.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bs.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bt.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bv.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bw.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/by.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/bz.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ca.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cc.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cd.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cf.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cg.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ch.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ci.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ck.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cl.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cm.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cn.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/co.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cr.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cu.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cv.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cw.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cx.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cy.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/cz.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/de.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/dj.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/dk.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/dm.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/do.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/dz.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ec.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/ee.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/eg.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/eh.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flags/1x1/er.svg">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="assets/css/flat-admin.css">
+      <publishTime>03/18/2017 19:09:34</publishTime>
+    </File>
+    <File Include="assets/css/loginpage.css">
+      <publishTime>03/17/2017 22:00:20</publishTime>
+    </File>
+    <File Include="assets/css/vendor.css">
+      <publishTime>10/09/2016 02:06:14</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/15/2017 21:59:24</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/15/2017 21:59:26</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/26/2017 21:47:32</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

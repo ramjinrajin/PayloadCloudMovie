@@ -1,0 +1,237 @@
+﻿@model List<inzCloud.Models.Property.User>
+
+@{
+    ViewBag.Title = "FilePermission";
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+
+
+<link href="~/assets/css/admin/adminstyle.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="~/assets/js/jquery-3.0.0.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/dot-luv/jquery-ui.css">
+
+<style>
+    .nav-tabs {
+        border-bottom: 2px solid #DDD;
+    }
+
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+            border-width: 0;
+        }
+
+        .nav-tabs > li > a {
+            border: none;
+            color: #666;
+        }
+
+            .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+                border: none;
+                color: #4285F4 !important;
+                background: transparent;
+            }
+
+            .nav-tabs > li > a::after {
+                content: "";
+                background: #4285F4;
+                height: 2px;
+                position: absolute;
+                width: 100%;
+                left: 0px;
+                bottom: -1px;
+                transition: all 250ms ease 0s;
+                transform: scale(0);
+            }
+
+        .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+            transform: scale(1);
+        }
+
+    .tab-nav > li > a::after {
+        background: #21527d none repeat scroll 0% 0%;
+        color: #fff;
+    }
+
+    .tab-pane {
+        padding: 15px 0;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+
+    .card {
+        background: #FFF none repeat scroll 0% 0%;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+        margin-bottom: 30px;
+    }
+</style>
+
+
+<script>
+    $(document).ready(function () {
+
+
+        var val = '@Html.Raw((string)TempData["AlertMessage"])';
+
+
+        if (val == "Sucess") {
+            $("#Sucess").fadeIn(300);
+            $("#Sucess").delay(2000).fadeOut(500);
+        }
+        else if (val == "Error") {
+            if (val != "") {
+                $("#Error").fadeIn(300);
+                $("#Error").delay(2000).fadeOut(500);
+            }
+        }
+        else if (val == "Invalid") {
+            $("#Invalid").fadeIn(300);
+            $("#Invalid").delay(2000).fadeOut(500);
+        }
+        else if (val == "NoFile") {
+            $("#NoFile").fadeIn(300);
+            $("#NoFile").delay(2000).fadeOut(500);
+        }
+    });
+</script>
+
+
+
+
+
+<div id="Sucess" class="alert alert-success" style="display: none;">
+    <strong>Sucess!</strong> Account settings saved successfully
+</div>
+
+<div id="Error" class="alert alert-warning" style="display: none;">
+    <strong>Failed!</strong> Unable to perform this action
+</div>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Nav tabs --><div class="card">
+                <ul class="nav nav-tabs" role="tablist" id="tabs">
+                    <li role="presentation" class="active"><a href="/AccountSettings/Admin">Back</a></li>
+                    @*<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">File</a></li>*@
+                    @*<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>*@
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <form id="register-form"  method="post" role="form">
+                            <div id="UserPanel">
+                                <div class="panel panel-default">
+                                    <!-- Default panel contents -->
+                                    <!-- List group -->
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+
+                                            <div class="panel-heading">User  access over files can be Enable/Disable</div>
+                                        </li>
+
+                                        @foreach (var Item in Model)
+                                        {
+                                            <li class="list-group-item">
+                                                @Item.Username
+                                                @if (Item.Rowstatus == 'A')
+                                                {
+                                                    <div class="material-switch pull-right">
+                                                        @Html.DropDownList(@Item.Username, new List<SelectListItem>
+                {
+                new SelectListItem { Text="Enable",Value="A", Selected=true},
+                new SelectListItem { Text="Disable",Value="D"},
+                }, "Select Status")
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="material-switch pull-right">
+                                                        @Html.DropDownList(@Item.Username, new List<SelectListItem>
+                {
+                new SelectListItem { Text="Enable",Value="A"},
+                new SelectListItem { Text="Disable",Value="D", Selected=true},
+                }, "Select Status")
+                                                    </div>
+                                                }
+
+                                            </li>
+                                        }
+
+
+                                    </ul>
+
+
+
+                                </div>
+
+                                <button id="save" type="submit" formmethod="post" class="btn btn-primary ">Save</button>
+                            </div>
+                        </form>
+
+                            @*<div id="FilePanel">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <!-- List group -->
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Ramjin
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" />
+                                <label for="someSwitchOptionDefault" class="label-default"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Samjin
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" />
+                                <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Baiju
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox" />
+                                <label for="someSwitchOptionSuccess" class="label-success"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Balu
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox" />
+                                <label for="someSwitchOptionInfo" class="label-info"></label>
+                            </div>
+                        </li>
+
+
+
+
+                                <button id="save" type="button" class="btn btn-primary  pull-right">Save</button>
+
+
+
+                    </ul>
+
+                </div>
+
+
+            </div>*@
+                            @*<button id="next" type="button" class="btn btn-primary">Next</button>*@
+
+
+</div>
+
+                    <div role="tabpanel" class="tab-pane" id="messages">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <div role="tabpanel" class="tab-pane" id="settings">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+Create Table inz_file_status
+(
+FileId int,
+UserId int,
+[Count] int,
+ModifiedDate datetime default getdate()
+)

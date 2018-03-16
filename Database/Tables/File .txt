@@ -1,0 +1,17 @@
+CREATE TABLE [dbo].[inz_file](
+	[FileID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID] [int] NULL,
+	[description] [nvarchar](max) NULL,
+	[FileName] [nvarchar](max) NULL,
+	[FileType] [nvarchar](max) NULL,
+	[Key] [nvarchar](max) NULL,
+	[createdate] [datetime] NULL,
+	[modifieddate] [datetime] NULL,	 
+	[IsEncrypted] [int] NULL)
+
+
+ALTER TABLE inz_file
+ADD AccessCount int;
+
+ALTER TABLE inz_file
+ADD DocumentName [varchar](100);

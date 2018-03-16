@@ -1,0 +1,144 @@
+﻿@{
+
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+<div id="Sucess" class="alert alert-success" style="display: none;">
+    <strong>Sucess!</strong> File Uploaded successfully
+</div>
+
+<div id="NoFile" class="alert alert-warning" style="display: none;">
+    <strong>Failed!</strong> Please choose a file
+</div>
+
+<div id="Error" class="alert alert-warning" style="display: none;">
+    <strong>Failed!</strong> Mandatory fields cannot be empty
+</div>
+
+
+<div id="Invalid" class="alert alert-danger" style="display: none;">
+    <strong>Failed!</strong> Unable to upload the file
+</div>
+
+
+
+<h3>File upload</h3>
+<p>Upload the file here which will get encrypted before it get uploaded to the server</p>
+<p>Type the key to ensure the algorithmn type</p>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+        <input id="email" type="text" class="form-control" name="Name" placeholder="File Name">
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+        <input id="desc" type="text" class="form-control" name="Description" placeholder="File description">
+    </div>
+    <br>
+    <div class="input-group">
+        <span class="input-group-addon">Key</span>
+        <input id="key" type="text" name="key" class="form-control">
+    </div>
+    <br>
+
+    <br>
+
+    <p>Select a file that needed to be encrypted</p>
+
+    <label class="control-label">Select File</label>
+
+    <div class="input-group image-preview">
+        <input name="files" id="files" type="file" accept="doc,pdf" />
+        <span class="input-group-btn">
+            <!-- image-preview-clear button -->
+            <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                <span class="glyphicon glyphicon-remove"></span> Clear
+            </button>
+
+
+        </span>
+    </div>
+
+
+
+    <br>
+    <div class="col-md-pull-12 text-center">
+        <button type="submit" class="btn btn-primary btn-block  center-block">Upload</button>
+    </div>
+</form>
+
+
+<script>
+    $(document).ready(function () {
+
+
+
+        $("#key").on("change paste keyup", function () {
+            $('#key').val(function () {
+                return this.value.toUpperCase();
+            })
+        });
+
+        var val = '@Html.Raw((string)TempData["AlertMessage"])';
+
+
+        if (val == "Sucess") {
+            $("#Sucess").fadeIn(300);
+            $("#Sucess").delay(2000).fadeOut(500);
+        }
+        else if (val == "Error") {
+            if (val != "") {
+                $("#Error").fadeIn(300);
+                $("#Error").delay(2000).fadeOut(500);
+            }
+        }
+        else if (val == "Invalid") {
+            $("#Invalid").fadeIn(300);
+            $("#Invalid").delay(2000).fadeOut(500);
+        }
+        else if (val == "NoFile") {
+            $("#NoFile").fadeIn(300);
+            $("#NoFile").delay(2000).fadeOut(500);
+        }
+
+
+
+
+
+
+
+        $('#register-submit').click(function () {
+
+            var password = $('#confirm-password2').val();
+            var Cnfpassword = $('#confirm-password').val();
+
+            if (password != Cnfpassword) {
+                $("form").submit(function (e) {
+                    e.preventDefault();
+                });
+                $("#Error").fadeIn(300);
+                $("#Error").delay(2000).fadeOut(500);
+            }
+            else
+                if (val == "Error") {
+                    if (val != "") {
+                        $("#Error").fadeIn(300);
+                        $("#Error").delay(2000).fadeOut(500);
+                    }
+                }
+        });
+
+
+
+
+
+
+
+    });
+</script>
+
+
+
+

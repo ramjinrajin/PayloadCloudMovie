@@ -1,0 +1,54 @@
+USE [inzCloud]
+GO
+
+/****** Object:  StoredProcedure [dbo].[spUpdateFileStatus]    Script Date: 26-Mar-17 6:58:57 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+ 
+ 
+CREATE procedure [dbo].[spUpdateFileAccess]
+
+(
+
+@FileId int,
+@UserId int,
+@Status varchar(10)
+)
+
+as begin
+
+
+
+if not exists(select * from [dbo].inzFileAccess where FileId=@FileId and UserId=@UserId)
+
+begin
+
+INSERT INTO inzFileAccess (FileId,UserId,Status) VALUES (@FileId,@UserId,@Status)
+
+ 
+
+select 1 as val
+
+end
+
+else
+
+begin
+
+update  [dbo].inzFileAccess set [Status]=@Status
+
+where FileId=@FileId and UserId=@UserId
+
+select 1 as val
+
+end
+
+end
+GO
+
+

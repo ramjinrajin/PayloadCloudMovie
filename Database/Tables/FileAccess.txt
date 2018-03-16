@@ -1,0 +1,7 @@
+Create Table inzFileAccess
+(
+FileId int,
+UserId int,
+Status varchar(10),
+ModifiedDate Datetime default getdate()
+)

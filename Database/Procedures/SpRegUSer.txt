@@ -1,0 +1,67 @@
+
+
+
+CREATE PROC spRegisterUser @UserName NVARCHAR(100)
+
+,@Password NVARCHAR(200)
+
+,@Email NVARCHAR(200)
+
+
+AS
+
+BEGIN
+
+DECLARE @Count INT
+
+DECLARE @ReturnCode INT
+
+
+
+SELECT @Count = COUNT(UserName)
+
+FROM inz_USERS
+
+WHERE UserName = @UserName and EmailID=@Email
+
+
+
+IF @Count > 0
+
+BEGIN
+
+SET @ReturnCode = - 1
+
+END
+
+ELSE
+
+BEGIN
+
+SET @ReturnCode = 1
+
+
+
+INSERT INTO inz_USERS (Username,Password,EmailID,Rowstatus,createdate)
+
+VALUES (
+
+@UserName
+
+,@Password
+
+,@Email
+
+,'A'
+
+,GetDATE()
+
+)
+
+END
+
+
+
+SELECT @ReturnCode AS ReturnValue
+
+END

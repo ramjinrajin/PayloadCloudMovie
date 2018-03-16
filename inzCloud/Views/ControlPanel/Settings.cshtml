@@ -1,0 +1,245 @@
+﻿@model List<int>
+
+
+@{
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Flat Admin V.3 - Free flat-design bootstrap administrator templates</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*<link rel="stylesheet" type="text/css" href="~/assets/css/vendor.css">*@
+    @*<link rel="stylesheet" type="text/css" href="~/assets/css/flat-admin.css">*@
+    <!-- Theme -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/theme/blue-sky.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/theme/blue.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/theme/red.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/theme/yellow.css">
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+
+    }
+
+    <div class="app app-default">
+
+        <script type="text/ng-template" id="sidebar-dropdown.tpl.html">
+            <div class="dropdown-background">
+                <div class="bg"></div>
+            </div>
+            <div class="dropdown-container">
+                {{list}}
+            </div>
+        </script>
+        <div class="app-container" style="padding-left: 0px;">
+
+            <div class="btn-floating" id="help-actions">
+                <div class="btn-bg"></div>
+                @*<button type="button" class="btn btn-default btn-toggle" data-toggle="toggle" data-target="Index">
+                    +
+                </button>*@
+                @*<div class="toggle-content">
+                    <ul class="actions">
+                        <li><a href="#">Website</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Issues</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>*@
+            </div>
+            <div class="row">
+                @*<div class="col-xs-12">
+                    <div class="card card-banner card-chart card-green no-br">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="title">File Access Today</div>
+                            </div>
+                            <ul class="card-action">
+                                <li>
+                                    <a href="/">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="ct-chart-sale"></div>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <a class="card card-banner card-green-light">
+                        <div class="card-body">
+                            <i class="icon fa fa-shopping-basket fa-4x"></i>
+                            <div class="content">
+                                <div class="title">File Acess</div>
+                                <div class="value"><span class="sign"></span>420</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <a class="card card-banner card-blue-light">
+                        <div class="card-body">
+                            <i class="icon fa fa-thumbs-o-up fa-4x"></i>
+                            <div class="content">
+                                <div class="title">Page Hits Rate</div>
+                                <div class="value"><span class="sign"></span>2453</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <a class="card card-banner card-yellow-light">
+                        <div class="card-body">
+                            <i class="icon fa fa-user-plus fa-4x"></i>
+                            <div class="content">
+                                <div class="title">New Registration</div>
+                                <div class="value"><span class="sign"></span>50</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row" ng-app="myapp">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-controller="myctrl">
+                    <div class="card card-tab card-mini">
+                        <div>
+                            <div>
+                                @*<input ng-model="chart.title.text">
+                                    <button ng-click="addSeries()">Add Series</button>
+                                    <button ng-click="addPoints()">Add Points to Random Series</button>
+                                    <button ng-click="removeRandomSeries()">Remove Random Series</button>*@
+                                @*<button ng-click="swapChartType()">Line/Bar</button>*@
+                                <highchart id="chart1" series="chart.series" title="chart.title" options="chart.options"></highchart>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-controller="myctrl">
+                    <div class="card card-tab card-mini">
+                        <div>
+                            <div>
+                                @*<button ng-click="swapChartType()">Line/Bar</button>*@
+                                <highchart id="chart2" series="chart2.series" title="chart2.title" options="chart2.options"></highchart>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./assets/js/vendor.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script src="https://code.angularjs.org/1.1.0/angular.js"></script>
+    <script src="https://rawgit.com/pablojim/highcharts-ng/v0.0.1/src/directives/highcharts-ng.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        var myapp = angular.module('myapp', ["highcharts-ng"]);
+        myapp.controller('myctrl', function ($scope, $http) {
+
+            $scope.addPoints = function () {
+                var seriesArray = $scope.chart.series
+                var rndIdx = Math.floor(Math.random() * seriesArray.length);
+                seriesArray[rndIdx].data = seriesArray[rndIdx].data.concat([1, 10, 20, 1, 10, 20, 1, 10, 20])
+            };
+
+            $scope.addSeries = function () {
+                var rnd = []
+                for (var i = 0; i < 10; i++) {
+                    rnd.push(Math.floor(Math.random() * 20) + 1)
+                }
+                $scope.chart.series.push({
+                    data: rnd
+                })
+            }
+
+            $scope.removeRandomSeries = function () {
+                var seriesArray = $scope.chart.series
+                var rndIdx = Math.floor(Math.random() * seriesArray.length);
+                seriesArray.splice(rndIdx, 1)
+            }
+
+            $scope.options = {
+                type: 'line'
+            }
+
+            $scope.swapChartType = function () {
+                if (this.chart.options.chart.type === 'line') {
+                    this.chart.options.chart.type = 'bar'
+                } else {
+                    this.chart.options.chart.type = 'line'
+                }
+            }
+
+
+            var Count = [];
+            $http({
+                method: 'GET',
+                url: 'getFileCount'
+            }).then(function successCallback(response) {
+                for (var i = 0; i < response.data.integers.length; i++) {
+                    Count.push(response.data.integers[i]);
+                }
+
+
+
+            }, function errorCallback(response) {
+                //alert(response);
+
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+            });
+
+            $scope.chart = {
+                options: {
+                    chart: {
+                        type: 'line'
+                    }
+                },
+                series: [{
+                    data: Count
+                }],
+                title: {
+                    text: 'Verifiable Computing line chart'
+                }
+            }
+
+
+            $scope.chart2 = {
+                options: {
+                    chart: {
+                        type: 'bar'
+                    }
+                },
+                series: [{
+                    data: Count
+                }],
+                title: {
+                    text: 'Verifiable Computing Bar chart'
+                }
+            }
+
+        });
+
+
+
+
+    </script>
+
+</body>
+</html>

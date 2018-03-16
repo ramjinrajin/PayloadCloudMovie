@@ -1,0 +1,91 @@
+﻿@model List<inzCloud.Models.FileEntity>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+
+<div class="container">
+   <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Shared link</h4>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="2" id="comment"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+@foreach (var Item in Model)
+{
+    <div itemscope itemtype="http://schema.org/LocalBusiness" class="row">
+        <div class="col-md-2">
+            <a href="www.ggogle.com" target="_blank">
+
+                @if (Item.FileType == "PDF")
+                {
+                    <img src="~/img/pdfIcon.jpeg" class="img-responsive imgageGetshare" />
+                }
+                else if (Item.FileType == "IMAGE")
+                {
+                    <img src="~/img/jpegIcon.png" class="img-responsive imgageGetshare" />
+                }
+
+                else if (Item.FileType == "DOCUMENT")
+                {
+
+                    <img src="~/img/docIcon.jpg" class="img-responsive imgageGetshare" />
+                }
+                else
+                {
+
+                    <img src="~/img/ErrorIcon.png" class="img-responsive imgageGetshare" />
+                }
+
+
+
+            </a>
+        </div>
+        <div class="col-md-9">
+            <h3 itemprop="name">@Item.Name</h3>
+
+            <p style="white-space: pre-line;">@Item.Description</p>
+            <a itemprop="url" class="btn btn-primary" href="/ControlPanel/Settings" target="_blank">verifiable computing</a>
+            <button class="btn btn-primary Share" value='@Item.FileId' data-toggle="modal" data-target="#myModal">Generate share link</button>
+        </div>
+    </div>
+    <hr>
+}
+<br />
+<script src="~/assets/js/jquery-3.0.0.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $(".Share").click(function () {   
+            var me = $(this);
+            $('#comment').text("http://www.inzcloud.somee.com/FileDirectory/GetFile?FileId=" + me.val());
+        });
+
+       
+    });
+    
+</script>
+
+
+
+
