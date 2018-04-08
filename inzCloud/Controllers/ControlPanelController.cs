@@ -78,7 +78,7 @@ namespace inzCloud.Controllers
             }
 
 
-            return View();
+            return RedirectToAction("Index", "Movie");
         }
 
         [HttpGet]

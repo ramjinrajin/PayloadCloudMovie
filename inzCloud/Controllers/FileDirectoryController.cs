@@ -93,7 +93,8 @@ namespace inzCloud.Controllers
                 }
                 else
                 {
-                    return Redirect("~/FileDirectory/UnauthorizedFile");
+                    TempData["FileId"] = FileId;
+                    return Redirect("~/Confirm/Index");
                 }
                  
                
@@ -185,7 +186,8 @@ namespace inzCloud.Controllers
 
                 else
                 {
-                    return Redirect("~/FileDirectory/UnauthorizedFile");
+                    TempData["FileId"] = FileId;
+                    return Redirect("~/Confirm/Index");
                 }
 
             

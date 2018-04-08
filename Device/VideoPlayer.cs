@@ -17,6 +17,8 @@ namespace Device
         public VideoPlayer()
         {
             InitializeComponent();
+            Play.Hide();
+            AccessCode.Hide();
         }
 
         private void RenderMovie(int FileId)
@@ -69,20 +71,50 @@ namespace Device
            
         }
 
+        string VideoData = "NIL";
         private void button2_Click(object sender, EventArgs e)
         {
-            string db = Environment.CurrentDirectory.ToString();
+             if(textBox1.Text!="")
+             {
+                 string db = Environment.CurrentDirectory.ToString();
 
-            OpenFileDialog fg = new OpenFileDialog();
-            if (fg.ShowDialog() == DialogResult.OK)
-            {
+                 OpenFileDialog fg = new OpenFileDialog();
+                 if (fg.ShowDialog() == DialogResult.OK)
+                 {
 
-                string text = File.ReadAllText(fg.FileName, Encoding.UTF8);
-                RenderMovie(Convert.ToInt32(text.Trim()));
-                this.textBox1.Text = db + "\\Movie.3gp";
-            }
+                     string text = File.ReadAllText(fg.FileName, Encoding.UTF8);
+                     if (AccessCodeAuthenticator.GetAccess(Convert.ToInt32(text.Trim()), textBox1.Text))
+                     {
+                         RenderMovie(Convert.ToInt32(text.Trim()));
+                         this.AccessCode.Text = db + "\\Movie.3gp";
+                         this.textBox1.Visible = false;
+                         button2.Visible = false;
+                         label2.Hide();
+                         Play.Show();
+                       
+                         VideoData = AccessCode.Text;
+                     }
+                     else
+                     {
+                         MessageBox.Show("Please purchase the movie you are not authorized to view the movie", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     }
 
-            this.axWindowsMediaPlayer1.URL = textBox1.Text;
+                 }
+                 else
+                 {
+                     MessageBox.Show("Please purchase the movie you are not authorized to view the movie", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 }
+
+                 //this.axWindowsMediaPlayer1.URL = AccessCode.Text;
+                
+             }
+             else
+             {
+                 MessageBox.Show("Access code cannot be empty");
+             }
+              
+            
+         
 
         }
 
@@ -104,6 +136,19 @@ namespace Device
                 MessageBox.Show(ex.Message);
             }
        
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (AccessCode.Text != "" || AccessCode.Text!="NIL")
+            {
+                this.axWindowsMediaPlayer1.URL = AccessCode.Text;
+            }
+            else
+            {
+                MessageBox.Show("Invalid file");
+            }
+              
         }
     }
 }

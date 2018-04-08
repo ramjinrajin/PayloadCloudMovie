@@ -22,16 +22,19 @@ namespace Device
         private void btnAddDriver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            if (txtUsername.Text == "payload_admin@inzenjer.in" && txtPassword.Text == "admin")
+            if (Authenticator.AuthenticateUser(txtUsername.Text, txtPassword.Text))
             {
-                Upload up = new Upload();
-                up.ShowDialog();
 
+                VideoPlayer vd = new VideoPlayer();
+                vd.Show();
             }
+
             else
             {
-                VideoPlayer frm = new VideoPlayer();
-                frm.Show();
+                MessageBox.Show("Invalid username or password","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                Login log = new Login();
+                log.Show();
+
             }
             
         }

@@ -30,7 +30,7 @@ namespace inzCloud.Models.Data_Layer
                         cmd.Parameters.AddWithValue("@IsEncrypted", 1);
                         cmd.Parameters.AddWithValue("@FileType", file.FileType);
                         cmd.Parameters.AddWithValue("@Document", file.Document);
-                        FileId = (int)cmd.ExecuteScalar();
+                        //FileId = (int)cmd.ExecuteScalar();
                         return InsertInitalApproveForCurrentUser(FileId);
                     }
                     catch (Exception)
@@ -120,7 +120,7 @@ namespace inzCloud.Models.Data_Layer
                 }
                 else
                 {
-                    cmd = new SqlCommand("select * from inz_file where USerID=@UserID order by 1 desc", con);
+                    cmd = new SqlCommand("select * from inz_file  order by 1 desc", con);
                     cmd.Parameters.AddWithValue("@UserID", UserId);
                 }
 

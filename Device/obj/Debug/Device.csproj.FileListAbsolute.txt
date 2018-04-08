@@ -22,3 +22,21 @@ C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\AxIn
 C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\Device.csproj.ResolveComReference.cache
 C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\Device.exe
 C:\Users\RamjinM\Desktop\New folder (12)\PayloadCloudMovie\Device\obj\Debug\Device.pdb
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\bin\Debug\Device.exe.config
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Interop.WMPLib.dll
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\AxInterop.WMPLib.dll
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.csproj.ResolveComReference.cache
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.exe
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.pdb
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\bin\Debug\bin\Debug\inzCloud.mdf
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\bin\Debug\bin\Debug\inzCloud_log.ldf
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\bin\Debug\Device.exe
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\bin\Debug\Device.pdb
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\bin\Debug\Interop.WMPLib.dll
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\bin\Debug\AxInterop.WMPLib.dll
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.csprojResolveAssemblyReference.cache
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.VideoPlayer.resources
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.Login.resources
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.Properties.Resources.resources
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.Upload.resources
+F:\Projects\Inzenjer\6.PayLoadMovie\PayloadCloudMovie\Device\obj\Debug\Device.csproj.GenerateResource.Cache
